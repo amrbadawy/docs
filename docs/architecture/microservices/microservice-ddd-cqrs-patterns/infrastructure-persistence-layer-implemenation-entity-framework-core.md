@@ -136,7 +136,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
             return _context.Buyers.Add(buyer).Entity;
         }
 
-        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        public async Task<Buyer> FindAsync(string buyerIdentityGuid)
         {
             var buyer = await _context.Buyers
                 .Include(b => b.Payments)
